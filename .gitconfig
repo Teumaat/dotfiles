@@ -1,0 +1,7 @@
+[user]
+	name = Pieter
+	email = pieter@tuxie.com
+[alias]
+  st = status -s
+[core]                                                                                                                        
+  filemode = false
