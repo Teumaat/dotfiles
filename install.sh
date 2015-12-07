@@ -36,11 +36,11 @@ if [ "$response" == "Y" ] || [ "$response" == "y" ] || [ "$response" == "" ]; th
 fi
 
 echo " "
-echo -n "Install Solarized profile for Xfce4 terminal? (Y/n): "
+echo -n "Install Solarized light profile for Xfce4 terminal? (Y/n): "
 read response
 if [ "$response" == "Y" ] || [ "$response" == "y" ] || [ "$response" == "" ]; then
   mkdir $HOME/.config/xfce4/terminal -p
-  ln -s $DIR/terminalrc $HOME/.config/xfce4/terminal/terminalrc
+  ln -s $DIR/light/terminalrc $HOME/.config/xfce4/terminal/terminalrc
 fi
 
 echo "Now installing Vundle plugins ... "

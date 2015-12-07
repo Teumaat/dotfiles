@@ -18,7 +18,7 @@ Bundle 'smarty.vim'
 call vundle#end()
 
 " Solarized theme
-set background=light
+set background=dark
 colorscheme solarized
 let g:solarized_termcolors=256
 set t_Co=256
