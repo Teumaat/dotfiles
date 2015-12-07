@@ -43,6 +43,9 @@ if [ "$response" == "Y" ] || [ "$response" == "y" ] || [ "$response" == "" ]; th
   ln -s $DIR/terminalrc $HOME/.config/xfce4/terminal/terminalrc
 fi
 
+echo "Now installing Vundle plugins ... "
+vim +PluginInstall +qall
+
 echo " "
 echo "All done :)"
 echo " "
