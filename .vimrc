@@ -3,10 +3,15 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
+" Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'scrooloose/syntastic'
+Plugin 'mudpile45/vim-phpdoc'
+Plugin 'groenewege/vim-less'
+Plugin 'bling/vim-airline'
+Plugin 'sudar/vim-arduino-syntax'
+
+Bundle 'smarty.vim'
 
 " All Vundle plugins must be called before this line
 call vundle#end()
@@ -38,19 +43,10 @@ au BufNewFile,BufRead *.tpl set ft=html
 
 " Handle tmux quirks in vim
 if $TERM =~ '^screen-256color'
-  nnoremap <Esc>OH <Home>
-  inoremap <Esc>OH <Home>
-  vnoremap <Esc>OH <Home>
-  snoremap <Esc>OH <Home>
-  cnoremap <Esc>OH <Home>
-  onoremap <Esc>OH <Home>
-
-  nnoremap <Esc>OF <End>
-  inoremap <Esc>OF <End>
-  vnoremap <Esc>OF <End>
-  snoremap <Esc>OF <End>
-  cnoremap <Esc>OF <End>
-  onoremap <Esc>OF <End>                                                                                                                                              
+  map <Esc>OH <Home>
+  map! <Esc>OH <Home>
+  map <Esc>OF <End>
+  map! <Esc>OF <End>
 endif
 
 " Auto complete
@@ -77,5 +73,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_php_checkers = ['php']
 
+" Airline
+let g:airline_powerline_fonts = 1
+set laststatus=2 " Always show Airline
