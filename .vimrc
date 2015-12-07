@@ -10,6 +10,7 @@ Plugin 'mudpile45/vim-phpdoc'
 Plugin 'groenewege/vim-less'
 Plugin 'bling/vim-airline'
 Plugin 'sudar/vim-arduino-syntax'
+Plugin 'altercation/vim-colors-solarized'
 
 Bundle 'smarty.vim'
 
