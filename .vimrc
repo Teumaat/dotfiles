@@ -20,8 +20,9 @@ call vundle#end()
 " Solarized theme
 set background=dark
 colorscheme solarized
-let g:solarized_termcolors=256
-set t_Co=256
+" Uncomment these 2 lines for gnome-terminal
+"let g:solarized_termcolors=256
+"set t_Co=256
 
 syntax on
 filetype plugin indent on
