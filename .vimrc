@@ -11,8 +11,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'bling/vim-airline'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'altercation/vim-colors-solarized'
-
-Bundle 'smarty.vim'
+Plugin 'sumpygump/php-documentor-vim'
 
 " All Vundle plugins must be called before this line
 call vundle#end()
@@ -35,13 +34,21 @@ set notbs
 set nopaste
 set incsearch
 set hlsearch
-set ignorecase
+set shell=/bin/bash
 
 " Jump to last position in file
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Smarty .tpl files contain html
 au BufNewFile,BufRead *.tpl set ft=html
+
+" PHPDoc
+au BufRead,BufNewFile *.php inoremap <buffer> <C-P> :call PhpDoc()<CR>
+au BufRead,BufNewFile *.php nnoremap <buffer> <C-P> :call PhpDoc()<CR>
+au BufRead,BufNewFile *.php vnoremap <buffer> <C-P> :call PhpDocRange()<CR>
+let g:pdv_cfg_Package = 'IZICMS'
+let g:pdv_cfg_Author = 'Pieter Hensen <pieter@izi-services.nl>'
+let g:pdv_cfg_Version = '1.0'
 
 " Handle tmux quirks in vim
 if $TERM =~ '^screen-256color'
@@ -72,7 +79,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
