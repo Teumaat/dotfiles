@@ -85,7 +85,7 @@ nmap <Leader>f :Neoformat<CR>
 Plug 'mudpile45/vim-phpdoc'       " shift-K in normal mode
 
 " ================ PHP doc comments ==================
-"Plugin 'sumpygump/php-documentor-vim'
+"Plug 'sumpygump/php-documentor-vim'
 "inoremap <C-c> <ESC>:call PhpDocSingle()<CR>i
 "nnoremap <C-c> :call PhpDocSingle()<CR>
 "vnoremap <C-c> :call PhpDocRange()<CR>
@@ -116,7 +116,7 @@ Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 
 " =============== Smarty indent ======================
-"Plug 'blueyed/smarty.vim'
+Plug 'blueyed/smarty.vim'
 
 " ============ Gruvbox color scheme ==================
 Plug 'morhetz/gruvbox'

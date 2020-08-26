@@ -3,6 +3,8 @@
 # for examples
 
 # If not running interactively, don't do anything
+umask 002
+
 case $- in
     *i*) ;;
       *) return;;
@@ -57,7 +59,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 # Load git prompt support
-source /home/pieter/dotfiles/git-prompt.sh 
+source /home/pieter/dotfiles/git-prompt.sh
 
 if [ "$color_prompt" = yes ]; then
   PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '
@@ -120,3 +122,4 @@ export PYTHONPATH="${PYTHONPATH}:/usr/local/lib/python2.7/dist-packages/scons-2.
 
 export TERM="screen-256color"
 alias tmux="tmux -2"
+alias vi="vim"
